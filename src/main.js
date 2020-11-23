@@ -6,6 +6,10 @@ import store from "./store";
 import { Header } from "mint-ui";
 Vue.component(Header.name, Header);
 
+import { Tabbar, TabItem } from "mint-ui";
+Vue.component(Tabbar.name, Tabbar);
+Vue.component(TabItem.name, TabItem);
+
 Vue.config.productionTip = false;
 
 new Vue({
