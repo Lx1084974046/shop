@@ -10,7 +10,7 @@ export default {
   },
   computed: {},
   watch: {},
-  methods: {},
+  methods: {}
 };
 </script>
 
