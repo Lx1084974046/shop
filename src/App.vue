@@ -1,7 +1,9 @@
 <template>
   <div>
     <mt-header fixed title="固定在顶部"></mt-header>
-    <router-view></router-view>
+    <transition>
+      <router-view></router-view>
+    </transition>
     <mt-tabbar v-model="selected">
       <mt-tab-item id="a1">
         <img slot="icon" src="./assets/home.png" />
@@ -68,5 +70,18 @@ body {
 .mint-header {
   width: 414px;
   height: 50px;
+}
+.v-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.v-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+  position: absolute;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.5s ease;
 }
 </style>

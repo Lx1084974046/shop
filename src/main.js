@@ -11,6 +11,8 @@ Vue.component(TabItem.name, TabItem);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 
+import "./lib/mui/css/mui.min.css";
+
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
 
