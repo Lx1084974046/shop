@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-container">
     <mt-swipe :auto="1000">
       <mt-swipe-item v-for="(item, index) in imgList" :key="index">
         <img :src="item" alt="" />
@@ -56,9 +56,9 @@
           >
         </li>
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-          <a href="#">
+          <router-link to="/home/newslist">
             <img src="../assets/home/menu4.png" alt="" />
-            <div class="mui-media-body">more</div></a
+            <div class="mui-media-body">more</div></router-link
           >
         </li>
       </ul>
@@ -84,7 +84,6 @@ export default {
       this.$axios
         .get("http://rap2api.taobao.org/app/mock/271591/home/top")
         .then((res) => {
-          console.log(res);
           this.imgList = res.data;
         });
     },
@@ -93,7 +92,6 @@ export default {
 </script>
 <style scoped lang="scss">
 .mint-swipe {
-  margin-top: 20px;
   width: 414px;
   height: 200px;
 }

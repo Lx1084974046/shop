@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mt-header fixed title="固定在顶部"></mt-header>
+    <mt-header fixed :title="tit"></mt-header>
     <transition>
       <router-view></router-view>
     </transition>
@@ -29,36 +29,54 @@
 export default {
   data() {
     return {
+      tit: "首页",
       selected: "a1",
     };
   },
+  created() {
+    this.selected = sessionStorage.getItem('selected')
+  },
   watch: {
+    $route() {
+      sessionStorage.setItem('selected', this.selected)
+    },
     selected(newval, oldval) {
       console.log(newval + "--------" + oldval);
       switch (newval) {
-        case "a1":
+        case "a1": {
           this.$router.push({
             path: "/home",
           });
+          this.tit = "首页";
+        }
           break;
-        case "a2":
+        case "a2": {
           this.$router.push({
             path: "/vip",
           });
+          this.tit = "会员"
+        }
+
           break;
-        case "a3":
+        case "a3": {
           this.$router.push({
             path: "/cart",
           });
+          this.tit = "购物车"
+        }
+
           break;
-        case "a4":
+        case "a4": {
           this.$router.push({
             path: "/search",
           });
+          this.tit = "搜索"
+        }
+
           break;
       }
     },
-  },
+  }
 };
 </script>
 
@@ -70,6 +88,10 @@ body {
 .mint-header {
   width: 414px;
   height: 50px;
+}
+.app-container {
+  margin-top: 20px;
+  overflow-x: hidden;
 }
 .v-enter {
   opacity: 0;
