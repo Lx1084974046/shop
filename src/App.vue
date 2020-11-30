@@ -72,7 +72,6 @@ export default {
           });
           this.tit = "搜索"
         }
-
           break;
       }
     },
@@ -105,5 +104,8 @@ body {
 .v-enter-active,
 .v-leave-active {
   transition: all 0.5s ease;
+}
+mt-tab-container-item {
+  height: 50px;
 }
 </style>
