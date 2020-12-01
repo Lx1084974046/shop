@@ -108,4 +108,7 @@ body {
 mt-tab-container-item {
   height: 50px;
 }
+.mint-tabbar {
+  position: fixed;
+}
 </style>

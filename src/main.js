@@ -14,7 +14,6 @@ Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(TabContainer.name, TabContainer);
 Vue.component(TabContainerItem.name, TabContainerItem);
 Vue.component(Navbar.name, Navbar);
-
 import "./lib/mui/css/mui.min.css";
 
 Vue.prototype.$axios = axios;
