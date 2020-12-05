@@ -10,8 +10,7 @@
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
           <a href="#">
             <img src="../assets/home/menu1.png" alt="" />
-            <div class="mui-media-body">Home</div></a
-          >
+            <div class="mui-media-body">Home</div></a>
         </li>
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
           <a href="#">
